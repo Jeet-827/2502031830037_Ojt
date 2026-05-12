@@ -12,11 +12,17 @@
 
             color: aqua;
             text-transform: capitalize;
+            position: relative;
+            z-index: 1;
+            left: 10px;
         }
         .text{
             font-size: 35px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             text-align: center;
+            position: absolute;
+            z-index: 5;
+            
         }
         .text2:hover{
 
