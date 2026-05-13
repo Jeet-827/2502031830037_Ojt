@@ -1,0 +1,117 @@
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+
+        .box-fixed{
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            background-color: red;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .box-fixed h1{
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+      
+
+        .box-absolute{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(90, 90, 90);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .box-absolute .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: yellow;
+
+            position: absolute;
+            left: 40%;
+            top: 40%;
+
+            z-index: 1;
+        }
+
+        .box-absolute .box1{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: white;
+
+            position: absolute;
+            left: 45%;
+            top: 45%;
+
+            z-index: 2;
+        }
+      
+
+        .box-relative{
+            width: 100%;
+            height: 400px;
+            background-color: lightblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .box-relative .green-box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+
+            position: relative;
+            top: -30px;
+            left: 20px;
+        }
+
+        .box-relative .blue-box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            position: relative;
+            bottom: -30px;
+            right: 20px;
+        }
+
+
+
+        .float{
+            width: 100%;
+            height: 100vh;
+            
+        }
+        .left{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            float: left;
+        }
+        .rigth{
+            width: 200px;
+            height: 50px;
+            background-color: aqua;
+            float: right;
+        }
