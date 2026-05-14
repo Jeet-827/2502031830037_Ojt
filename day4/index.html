@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2></h2>
+    <h1>The sum of x and y</h1>
+
+     <div class="container">
+    <h1>Temperature Checker</h1>
+
+    <input type="number" id="temp" placeholder="Enter temperature">
+
+    <br>
+
+    <button onclick="checkTemp()">
+      Check
+    </button>
+
+    <h2 id="result"></h2>
+  </div>
+
+      <input type="number" id="amount" placeholder="Enter amount">
+
+    <br>
+
+    <button onclick="withdrawMoney()">
+      Withdraw
+    </button>
+
+    <h2 id="result"></h2>
+  </div>
+ <div class="salary-box">
+
+    <h1>Salary Bonus Calculator</h1>
+
+    <input 
+      type="number"
+      id="salary"
+      class="salary-input"
+      placeholder="Enter Salary"
+    >
+
+    <br>
+
+    <button 
+      class="bonus-btn"
+      onclick="calculateBonus()"
+    >
+      Calculate Bonus
+    </button>
+
+    <h2 id="result" class="output-text"></h2>
+
+  </div>
+
+    <script>
+        alert("Hello boys")
+
+        let h2 = document.querySelector("h2")
+
+        h2.innerHTML = "Hello boys 2.0"
+
+        var x = 20;
+        var y = 30;
+        var z = x + y;
+        let h1 = document.querySelector("h1")
+
+
+        let a = 5;
+        let b = true;
+        let arr = [1, 2, 3, 4]
+        h1.innerHTML = typeof (a) + typeof (b) + typeof (arr)
+
+                       let p = 10
+                       let q =20
+                       p++;
+                       q--;
+                    console.log(p);
+                       console.log(q)
+
+
+    let num = 20;
+    if(num % 2 === 0){
+alert("even")
+    }      
+    else{
+        alert("odd")
+    }     
+    
+    
+let sub1 =35
+let sub2 =65
+let sub3 =65
+let sub4 =55
+let sub5 =45
+
+if(sub1 < 30 || sub2 < 35 || sub3 < 35 || sub4 <35 || sub5 <35){
+    alert("fail")
+}
+else{alert("pass")}
+
+let year= 2008;
+if(year %4 === 0){
+    alert("year is leap year")
+}
+else{
+    alert("Not an leap year")
+}
+
+let age = 18;
+let lisence = true;
+if(age < 18 || lisence === false){
+    alert("not aligibal")
+}
+else{
+    alert("Aligibal")
+}
+
+
+ function checkTemp() {
+
+      let temp = document.getElementById("temp").value;
+      let result = document.getElementById("result");
+
+      if(temp === ""){
+        result.innerHTML = "Please enter temperature";
+      }
+      else if(temp < 15){
+        result.innerHTML = "Cold Weather";
+      }
+      else if(temp >= 15 && temp <= 30){
+        result.innerHTML = " Normal Weather";
+      }
+      else{
+        result.innerHTML = "Hot Weather";
+      }
+
+    }
+
+
+    let total = sub1+sub2+sub3+sub4+sub5;
+    let per = total / 5 * 100
+    if(per <=75){
+        alert("a")
+    }
+    else if(per <=65){
+        alert("b")
+    }
+else if(per <=55){
+        alert("c")
+    }
+
+    else  if(per <=45){
+        alert("d")
+    }
+
+    else{
+        alert("fail")
+    }
+
+
+      let balance = 10000;
+
+    function withdrawMoney(){
+
+      let amount = Number(document.getElementById("amount").value);
+      let result = document.getElementById("result");
+
+      if(amount === 0){
+        result.innerHTML = "Enter withdrawal amount";
+      }
+
+      else if(amount % 100 !== 0){
+        result.innerHTML = "Amount must be multiple of 100";
+      }
+
+      else if(amount > balance){
+        result.innerHTML = "Insufficient Balance";
+      }
+
+      else{
+        balance = balance - amount;
+
+        result.innerHTML =
+          " Withdrawal Successful <br>" +
+          "Remaining Balance: ₹" + balance;
+      }
+
+    }
+
+    function calculateBonus(){
+
+      let salary = Number(document.getElementById("salary").value);
+
+      let result = document.getElementById("result");
+
+      let bonus = 0;
+
+      if(salary < 20000){
+        bonus = salary * 0.10;
+      }
+
+      else if(salary <= 50000){
+        bonus = salary * 0.15;
+      }
+
+      else{
+        bonus = salary * 0.20;
+      }
+
+      let finalSalary = salary + bonus;
+
+      result.innerHTML =
+        "Bonus: ₹" + bonus + "<br>" +
+        "Final Salary: ₹" + finalSalary;
+
+    }
+
+    </script>
+
+</body>
+
+</html>
