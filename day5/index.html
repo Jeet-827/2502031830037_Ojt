@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let a = 0;
+        while (a <= 10) {
+            document.write(a)
+            a++
+        }
+
+        let arr = ['jeet', 'carry minati', 'yash']
+        arr.forEach((elem) => {
+            document.write(elem)
+        })
+
+        let mark = [30, 20, 35, 65, 45]
+        let totals = 0
+        for (i = 0; i <= mark.length; i++) {
+
+            totals += mark[i]
+        }
+        document.write(totals)
+
+        for (j = 0; j <= 15; j++) {
+            if (j % 2 === 0) {
+                document.write("even", j)
+
+            }
+            document.write("odd", j)
+        }
+
+   
+        let count = 0
+
+        setInterval(() => {
+
+            count++
+
+            document.write( count)
+
+        }, 1000)
+
+        if(count === 30){
+            clearInterval
+            
+        }
+
+
+        let car =  new Array(3)
+        car[0]="gtr"
+        car[1]="911"
+        car[2]="RX7"
+        let car2 = ["toyota","nissan","tata"]
+        let car3 = ["lamborgini","bmw","porche"]
+        document.write(car2)
+        car2.push("honda")
+        document.write(car2)
+        let data = car2.concat(car3)
+
+        document.write(data)
+        
+        
+    
+    </script>
+</body>
+
+</html>
