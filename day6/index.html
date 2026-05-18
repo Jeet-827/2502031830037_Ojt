@@ -8,6 +8,20 @@
 </head>
 
 <body>
+<input type="text" value="Hellow" id="myText">
+
+
+
+
+<form id="myform">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="button" onclick="hanlde()" value="">
+</form>
+
+
+<input type="email"  id="email">
+
 
     <script>
         const stud = function (name) {
@@ -21,7 +35,7 @@
 document.writeln(Math.E);
 
 var a = Math.pow(2, 3);
-document.writeln(a);
+document.writeln(a);    
 
 var num = Math.random();
 document.writeln(num);
@@ -41,6 +55,42 @@ document.writeln(Math.round(2, 7)+`<br>`);
         }
 
         obj.fun()
+
+let text2 = document.querySelector("#myText");
+
+console.log(text2.value);
+
+
+function handle(){
+    const f = document.querySelector("#myform")
+    const name = f.username.value
+    const password = f.password.value
+
+
+    if(name === "admin" || password === "123"){
+       return alert("valid")
+    }
+    alert("Invalid")
+}
+
+
+
+const mail = document.querySelector("#email").value
+
+
+function checkEmail(email) {
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (pattern.test(email)) {
+        console.log("Valid Email");
+    } else {
+        console.log("Invalid Email");
+    }
+}
+
+
+checkEmail(mail );
+
     </script>
 
 </body>
