@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kathiyawadi Rajwadi | Authentic Cuisine</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#home" class="logo">Rajwadi<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="cart-icon" id="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button class="close-cart" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart-msg">Your cart is empty.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="btn primary-btn checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <main>
+
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="hero-subtitle" data-aos="fade-down" data-aos-duration="1000">Experience the Taste of Gujarat
+                </p>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">Authentic
+                    Kathiyawadi</h1>
+                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+                    <a href="#menu" class="btn primary-btn">Order Now</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Authentic Indian Thali">
+                    </div>
+                    <div class="about-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <h2 class="section-title">Our <span>Roots</span></h2>
+                        <p class="lead-text">Bringing the rich heritage of Saurashtra to your plate.</p>
+                        <p>At Kathiyawadi Rajwadi, we celebrate the vibrant, spicy, and soulful flavors of Gujarat. Our
+                            recipes have been passed down through generations, utilizing traditional clay ovens and
+                            hand-ground spices. From our smoky Ringan no Olo to our sweet Mohanthal, every bite is a
+                            journey to the heart of India.</p>
+                        <a href="#reservations" class="btn secondary-btn">Book a Table</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="section menu-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">Our <span>Menu</span></h2>
+                <p class="text-center lead-text" style="margin-bottom: 2rem;">Premium Kathiyawadi Selection</p>
+
+                <!-- Menu Filter Tabs -->
+                <div class="menu-tabs" data-aos="fade-up">
+                    <button class="tab-btn active" data-filter="all">All Dishes</button>
+                    <button class="tab-btn" data-filter="starters">Starters & Snacks</button>
+                    <button class="tab-btn" data-filter="mains">Main Course</button>
+                    <button class="tab-btn" data-filter="breads-rice">Breads & Rice</button>
+                    <button class="tab-btn" data-filter="thali">Rajwadi Thali</button>
+                    <button class="tab-btn" data-filter="desserts-drinks">Desserts & Drinks</button>
+                </div>
+
+                <div class="menu-grid" data-aos="fade-up">
+
+                    <!-- 1. Kathiyavadi Fafda -->
+                    <div class="menu-item" data-category="starters">
+                        <img src="./images/fafda.png" alt="Kathiyavadi Fafda" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Kathiyavadi Fafda <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹80</span>
+                            </div>
+                            <p class="item-desc">Crispy gram flour strips served with fresh papaya papaya chutney &
+                                fried chillies.</p>
+                            <button class="add-to-cart-btn" data-name="Kathiyavadi Fafda" data-price="80">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Sev Khamani -->
+                    <div class="menu-item" data-category="starters">
+                        <img src="./images/sev_khamani.png" alt="Sev Khamani" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Sev Khamani <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹90</span>
+                            </div>
+                            <p class="item-desc">Coarse chana dal crumble tempered with mustard seeds, topped with fresh
+                                sev & pomegranate seeds.</p>
+                            <button class="add-to-cart-btn" data-name="Sev Khamani" data-price="90">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Bhel Puri -->
+                    <div class="menu-item" data-category="starters">
+                        <img src="./images/bhel_puri.png" alt="Bhel Puri" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Bhel Puri <span class="tag spicy"><i
+                                            class="fa-solid fa-pepper-hot"></i> Spicy</span></h4>
+                                <span class="item-price">₹70</span>
+                            </div>
+                            <p class="item-desc">Rustic puffed rice mix with tang of raw mango, sweet dates, tamarind &
+                                crisp sev (Kathiyavadi style).</p>
+                            <button class="add-to-cart-btn" data-name="Bhel Puri" data-price="70">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 4. Dabeli -->
+                    <div class="menu-item" data-category="starters">
+                        <img src="./images/dabeli.png" alt="Dabeli" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Dabeli <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹60</span>
+                            </div>
+                            <p class="item-desc">Spiced potato filling inside a buttery toasted pav bun garnished with
+                                sweet pomegranate & sev.</p>
+                            <button class="add-to-cart-btn" data-name="Dabeli" data-price="60">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="starters">
+                        <img src="https://imgs.search.brave.com/2nxYagtQBtWZBCCmtJ4Wv0JLWkaat4YOQLYx1otJpZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/amNvb2tpbmdvZHlz/c2V5LmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wOS9n/dWphcmF0aS1tZXRo/aS1nb3RhLmpwZw"
+                            alt="Methi na Gota" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Methi na Gota <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹100</span>
+                            </div>
+                            <p class="item-desc">Spongy and aromatic fried fenugreek leaf fritters served hot with
+                                mint-coriander chutney.</p>
+                            <button class="add-to-cart-btn" data-name="Methi na Gota" data-price="100">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 6. Ringna no Olo -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/ringna_olo.png" alt="Ringna no Olo" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Ringna no Olo <span class="tag spicy"><i
+                                            class="fa-solid fa-pepper-hot"></i> Spicy</span></h4>
+                                <span class="item-price">₹160</span>
+                            </div>
+                            <p class="item-desc">Charcoal fire-roasted mashed eggplant cooked in authentic spices &
+                                green garlic, Kathiyavadi style.</p>
+                            <button class="add-to-cart-btn" data-name="Ringna no Olo" data-price="160">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 7. Trevti Dal -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/trevti_dal.png" alt="Trevti Dal" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Trevti Dal <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹140</span>
+                            </div>
+                            <p class="item-desc">Nutritious thick three-lentil mix slowly simmered & tempered with dry
+                                whole red chillies & pure cow ghee.</p>
+                            <button class="add-to-cart-btn" data-name="Trevti Dal" data-price="140">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 8. Undhiyu -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/undhiyu.png" alt="Undhiyu" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Undhiyu <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹220</span>
+                            </div>
+                            <p class="item-desc">A winter classic of seasonal farm-fresh vegetables cooked with rich
+                                fenugreek dumplings (Muthiyas).</p>
+                            <button class="add-to-cart-btn" data-name="Undhiyu" data-price="220">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 9. Kathiyavadi Kadhi -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/kadhi.png" alt="Kathiyavadi Kadhi" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Kathiyavadi Kadhi <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹120</span>
+                            </div>
+                            <p class="item-desc">Spiced, sour yoghurt broth tempered with cinnamon, cloves & green
+                                chillies with a thick consistency.</p>
+                            <button class="add-to-cart-btn" data-name="Kathiyavadi Kadhi" data-price="120">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 10. Sev Tameta nu Shaak -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/sev_tameta.png" alt="Sev Tameta nu Shaak" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Sev Tameta nu Shaak <span class="tag spicy"><i
+                                            class="fa-solid fa-pepper-hot"></i> Spicy</span></h4>
+                                <span class="item-price">₹130</span>
+                            </div>
+                            <p class="item-desc">A sweet, tangy & fiery tomato gravy curry topped generously with heaps
+                                of crunchy local sev noodles.</p>
+                            <button class="add-to-cart-btn" data-name="Sev Tameta nu Shaak" data-price="130">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 11. Bataka Vada Shaak -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/bataka_vada.png" alt="Bataka Vada Shaak" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Bataka Vada Shaak <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹140</span>
+                            </div>
+                            <p class="item-desc">Golden-fried spiced potato dumplings nestled inside a richly spiced red
+                                tomato gravy curry.</p>
+                            <button class="add-to-cart-btn" data-name="Bataka Vada Shaak" data-price="140">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 12. Kanda Bataka nu Shaak -->
+                    <div class="menu-item" data-category="mains">
+                        <img src="./images/kanda_bataka.png" alt="Kanda Bataka nu Shaak" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Kanda Bataka nu Shaak <span class="tag spicy"><i
+                                            class="fa-solid fa-pepper-hot"></i> Spicy</span></h4>
+                                <span class="item-price">₹120</span>
+                            </div>
+                            <p class="item-desc">A highly flavorful, dry onion & potato sabzi tossed in rustic coarse
+                                home-ground masalas.</p>
+                            <button class="add-to-cart-btn" data-name="Kanda Bataka nu Shaak" data-price="120">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 13. Bajra Rotla -->
+                    <div class="menu-item" data-category="breads-rice">
+                        <img src="https://imgs.search.brave.com/sGLA2N7c5ptKFswtVn91szQaid05mu7bGlRlFUMJuO0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/amNvb2tpbmdvZHlz/c2V5LmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wMi9i/YWpyaS1uYS1yb3Rs/YS5qcGc"
+                            alt="Bajra Rotla" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Bajra Rotla <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹40</span>
+                            </div>
+                            <p class="item-desc">Authentic thick pearl millet flatbread roasted on clay tawa, served
+                                with a big scoop of fresh white butter.</p>
+                            <button class="add-to-cart-btn" data-name="Bajra Rotla" data-price="40">Add to Cart</button>
+                        </div>
+                    </div>
+
+
+                    <div class="menu-item" data-category="breads-rice">
+                        <img src="https://imgs.search.brave.com/K_FM3EpgBsr1B16ePEamNID7Um5VE3RDW4iv-SVbQYM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dGFybGFkYWxhbC5j/b20vbWVkaWEvcmVj/aXBlL21ldGhvZC8y/MDI2LzAzLzE5LzE2/LlNlcnZlX3RoZV9H/dWphcmF0aV9iaGFr/cmkud2VicD93PTgw/MCZmb3JtYXQ9d2Vi/cA"
+                            alt="Bhakri" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Bhakri <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹35</span>
+                            </div>
+                            <p class="item-desc">Thick, crispy yet soft wheat flatbread. A classic golden-brown roasted
+                                Kathiyavadi staple bread.</p>
+                            <button class="add-to-cart-btn" data-name="Bhakri" data-price="35">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 15. Khichdi (Toovar) -->
+                    <div class="menu-item" data-category="breads-rice">
+                        <img src="https://imgs.search.brave.com/VhHwSYMRH-n9mjn_xtc9fo4d8KHiniidS1WD4VLv9ok/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXRlLnZpc3Rh/LmNvbS9hcGkvbWVk/aWEvc21hbGwvMTcx/OTAzMzYyL3N0b2Nr/LXBob3RvLW1vb25n/LWRhbC1raGljaGRp/LWluZGlhbi1uYXRp/b25hbC1kaXNoLW9y/LWZvb2Qtc2VsZWN0/aXZlLWZvY3Vz"
+                            alt="Khichdi" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Khichdi (Toovar) <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹130</span>
+                            </div>
+                            <p class="item-desc">Comforting & healthy combination bowl of yellow pigeon peas and
+                                soft-boiled rice topped with aromatic cow ghee.</p>
+                            <button class="add-to-cart-btn" data-name="Khichdi (Toovar)" data-price="130">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 16. Kathiyavadi Unlimited Thali -->
+                    <div class="menu-item" data-category="thali">
+                        <img src="https://imgs.search.brave.com/pATlvBGnL33pm6zmkDv5nJEpRepRcFS5P4UlEazCBHM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE1/MjY0NzIzMy9waG90/by9rYXRoaXlhd2Fk/aS1ndWphcmF0aS10/aGFsaS1mcm9tLWlu/ZGlhbi1jdWlzaW5l/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1taHVKZXlNUXV6/ZHBpNEFaSm9ENHhv/V1JlRXc3VEZ2Vzc3/MlJCYXV0S040PQ"
+                            alt="Kathiyavadi Unlimited Thali" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Unlimited Thali <span class="tag bestseller"><i
+                                            class="fa-solid fa-star"></i> Bestseller</span></h4>
+                                <span class="item-price">₹350</span>
+                            </div>
+                            <p class="item-desc">Complete royal feast: Trevti Dal, Kadhi, 3 Sabzis, unlimited Bajra
+                                Rotlas, Bhakris, Khichdi, Papad, Chaas & dessert.</p>
+                            <button class="add-to-cart-btn" data-name="Kathiyavadi Unlimited Thali" data-price="350">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 17. Kathiyavadi Thali (full) -->
+                    <div class="menu-item" data-category="thali">
+                        <img src="https://www.foodiaq.com/wp-content/uploads/2024/02/Rajwadi-Thali.jpg"
+                            alt="Kathiyavadi Thali" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Rajwadi Thali (Full) <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹280</span>
+                            </div>
+                            <p class="item-desc">Perfect combination dinner platter served with 2 curries, sweet
+                                Mohanthal dessert, Bajra Rotlas, Kadhi & Khichdi.</p>
+                            <button class="add-to-cart-btn" data-name="Kathiyavadi Thali (full)" data-price="280">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 18. Mohanthal -->
+                    <div class="menu-item" data-category="desserts-drinks">
+                        <img src="https://imgs.search.brave.com/xFeaODT9LZRcu6MQ3Mnr9_BkZszRbWQaRJ_pqDSigeg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9iZXNhbi1idXJm/aS1tb2hhbnRoYWwt/cm9hc3RlZC1iYXJm/aS1pbmRpYW4tc3dl/ZXRfMTE4NDEwNC05/MzEuanBnP3NlbXQ9/YWlzX2h5YnJpZA"
+                            alt="Mohanthal" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Mohanthal <span class="tag veg"><i class="fa-solid fa-leaf"></i>
+                                        Veg</span></h4>
+                                <span class="item-price">₹100</span>
+                            </div>
+                            <p class="item-desc">Luxurious, dense gram flour fudge cooked slowly with ghee, laced with
+                                cardamom & premium Kashmiri saffron.</p>
+                            <button class="add-to-cart-btn" data-name="Mohanthal" data-price="100">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 19. Sukhdi (Gol Papdi) -->
+                    <div class="menu-item" data-category="desserts-drinks">
+                        <img src="https://imgs.search.brave.com/VYYyT8xMVzDoxlf_B5VXEAoEvZuPU44y0OPfcOmU6Ls/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXJjaGFuYXNraXRj/aGVuLmNvbS9fbmV4/dC9pbWFnZT91cmw9/aHR0cHM6Ly9zdG9y/YWdlLmdvb2dsZWFw/aXMuY29tL2FrX3N0/cmFwaV9jbXNfZ2Nw/L2ltYWdlcy9yZWNp/cGVzL2luZGlhbi9z/d2VldC1yZWNpcGVz/L0dvbF9QYXBkaV9H/b2xwYXBkaV9HdXJf/UGFwZGlfU3VraGRp/X1JlY2lwZV9HdWph/cmF0aV9Td2VldF8x/Ml9lNDI1YTg3NGE2/LmpwZyZ3PTE5MjAm/cT05MA"
+                            alt="Sukhdi" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Sukhdi (Gol Papdi) <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹80</span>
+                            </div>
+                            <p class="item-desc">Super melt-in-mouth traditional sweet squares made with pure whole
+                                wheat flour, organic jaggery & hot ghee.</p>
+                            <button class="add-to-cart-btn" data-name="Sukhdi" data-price="80">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- 20. Chaas (Masala Buttermilk) -->
+                    <div class="menu-item" data-category="desserts-drinks">
+                        <img src="https://imgs.search.brave.com/ojaHXpcTEV1PhwFu9pH7I4lGICBPsbT7OFrGyY5EP1M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/amNvb2tpbmdvZHlz/c2V5LmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNi8wNC9t/YXNhbGEtY2hhYXMu/anBn"
+                            alt="Chaas" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <h4 class="item-name">Masala Chaas <span class="tag veg"><i
+                                            class="fa-solid fa-leaf"></i> Veg</span></h4>
+                                <span class="item-price">₹50</span>
+                            </div>
+                            <p class="item-desc">A refreshing, gut-friendly buttermilk drink spiced with dry roasted
+                                cumin, mint, green coriander & curry leaves.</p>
+                            <button class="add-to-cart-btn" data-name="Chaas (Masala Buttermilk)" data-price="50">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservations Section -->
+        <section id="reservations" class="section reservation-section">
+            <div class="container">
+                <div class="reservation-box" data-aos="zoom-in" data-aos-duration="1000">
+                    <h2 class="section-title text-center">Reserve a <span>Table</span></h2>
+                    <p class="text-center reservation-desc">Experience the true taste of Saurashtra. Book your table
+                        today.</p>
+
+                    <form class="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <select id="time" required>
+                                    <option value="" disabled selected>Select a time</option>
+                                    <option value="17:00">5:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Guests</label>
+                                <select id="guests" required>
+                                    <option value="1">1 Person</option>
+                                    <option value="2" selected>2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">Confirm Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Footer Section -->
+        <footer id="contact" class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
+                        <a href="#home" class="logo">Rajwadi<span>.</span></a>
+                        <p>Authentic Kathiyawadi cuisine served with love and traditional hospitality.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Contact Us</h3>
+                        <p><i class="fa-solid fa-location-dot"></i> 123 Kathiyawadi Lane, Gujarat, India</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fa-solid fa-envelope"></i> hello@rajwadi.com</p>
+                    </div>
+
+                    <div class="footer-hours" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Opening Hours</h3>
+                        <p><span>Mon - Sun:</span> 11:00 AM - 3:00 PM</p>
+                        <p><span>Mon - Sun:</span> 7:00 PM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Kathiyawadi Rajwadi. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
+
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="https://images.unsplash.com/photo-1529310399831-ed472b81d589?q=80&w=687&auto=format&fit=crop"
+        id="bulb">
+
+    <br><br>
+
+    <input type="text" id="key" placeholder="Press any key">
+
+    <br><br>
+
+    <input type="number" id="row" placeholder="Enter rows">
+
+    <input type="number" id="col" placeholder="Enter cols">
+
+    <input type="submit" id="btn">
+
+    <div id="result"></div>
+
+    <script>
+
+        let a = document.querySelector("#bulb");
+
+        a.addEventListener("mouseover", () => {
+            a.src =
+                "https://images.unsplash.com/photo-1529310399831-ed472b81d589?q=80&w=687&auto=format&fit=crop";
+        });
+
+        a.addEventListener("mouseout", () => {
+            a.src =
+                "https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?q=80&w=687&auto=format&fit=crop";
+        });
+
+        let k = document.querySelector("#key");
+
+        k.addEventListener("keypress", (e) => {
+
+            let time = Date.now();
+
+            alert(`You pressed : ${e.key} \nTime : ${time}`);
+
+        });
+
+        let row = document.querySelector("#row");
+        let col = document.querySelector("#col");
+        let btn = document.querySelector("#btn");
+        let result = document.querySelector("#result");
+
+        btn.addEventListener("click", () => {
+
+            let table = "<table>";
+
+            for (let i = 1; i <= row.value; i++) {
+
+                table += "<tr>";
+
+                for (let j = 1; j <= col.value; j++) {
+
+                    table += `<td>${i} + ${j}</td>`;
+                }
+
+                table += "</tr>";
+            }
+
+            table += "</table>";
+
+            result.innerHTML = table;
+
+        });
+
+
+        let json = '{"name":"jphn","age:30","cars":["ford","gtr"]}'
+        const jjs = JSON.parse(json)
+        document.write(jjs.cars[0])
+    </script>
+
+</body>
+
+</html>

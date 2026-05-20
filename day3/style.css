@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial;
 }
 
-.box-fixed{
+.box-fixed {
     height: 70px;
     background: #ff4b2b;
     color: white;
@@ -18,7 +18,7 @@ body{
 }
 
 
-.box-absolute{
+.box-absolute {
     height: 100vh;
     background: gray;
     position: relative;
@@ -26,40 +26,42 @@ body{
 }
 
 .box,
-.box1{
+.box1 {
     width: 80px;
     height: 80px;
     position: absolute;
     animation: move 2s infinite alternate;
 }
 
-.box{
+.box {
     background: yellow;
     top: 40%;
     left: 40%;
 }
 
-.box1{
+.box1 {
     background: white;
     top: 45%;
     left: 45%;
 }
 
 
-@keyframes top{
-    from{
+@keyframes top {
+    from {
         transform: translateY(-100%);
     }
-    to{
+
+    to {
         transform: translateY(0);
     }
 }
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         transform: translateY(0);
     }
-    to{
+
+    to {
         transform: translateY(-20px);
     }
 }
@@ -67,37 +69,53 @@ body{
 
 
 .grid-container {
-  display: grid;
-  height: 100%;
-  
-  grid-template-columns: 2fr 1fr; 
-  
-  grid-template-rows: 80px 1fr 1fr 1fr 80px; 
-  
-  grid-template-areas:
-    "header header"
-    "main sidebar1"
-    "main sidebar2"
-    "main sidebar3"
-    "footer footer";
+    display: grid;
+    height: 100%;
+
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-rows: 80px 1fr 1fr 1fr 80px;
+
+    grid-template-areas:
+        "header header"
+        "main sidebar1"
+        "main sidebar2"
+        "main sidebar3"
+        "footer footer";
 }
 
-.header { grid-area: header; }
+.header {
+    grid-area: header;
+}
 
-.main-content { grid-area: main; }
-.sidebar-1 { grid-area: sidebar1; }
-.sidebar-2 { grid-area: sidebar2; }
-.sidebar-3 { grid-area: sidebar3; }
-.footer { grid-area: footer; }
+.main-content {
+    grid-area: main;
+}
 
-.grid-container > * {
-  border: 3px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fafafa;
+.sidebar-1 {
+    grid-area: sidebar1;
+}
+
+.sidebar-2 {
+    grid-area: sidebar2;
+}
+
+.sidebar-3 {
+    grid-area: sidebar3;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.grid-container>* {
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
 }
 
 .grid-container {
-  border: 3px solid black;
+    border: 3px solid black;
 }
